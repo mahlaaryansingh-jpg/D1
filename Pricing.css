@@ -1,0 +1,262 @@
+.pricing-page {
+  min-height: 650px;
+  padding: 60px 24px 70px;
+  background: #f5f8f8;
+  color: #17252b;
+  font-family: Arial, sans-serif;
+}
+
+.pricing-hero {
+  max-width: 700px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.pricing-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #218f92;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.pricing-hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.2;
+}
+
+.pricing-hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #64747a;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.pricing-plans {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 340px));
+  justify-content: center;
+  align-items: stretch;
+  gap: 28px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px;
+  background: #ffffff;
+  border: 1px solid #dce6e6;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(22, 52, 56, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(22, 52, 56, 0.12);
+}
+
+.plan-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  background: #e4f5f3;
+  border-radius: 12px;
+  font-size: 25px;
+}
+
+.pricing-card h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.plan-description {
+  min-height: 48px;
+  margin: 0;
+  color: #68777c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 25px 0;
+}
+
+.price {
+  color: #173e42;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.price-period {
+  color: #68777c;
+  font-size: 14px;
+}
+
+.plan-features {
+  display: grid;
+  gap: 17px;
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none;
+  color: #3c5055;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.plan-button {
+  width: 100%;
+  min-height: 46px;
+  margin-top: auto;
+  padding: 12px 16px;
+  border: 1px solid #258f91;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.free-button {
+  background: #ffffff;
+  color: #218f92;
+}
+
+.upgrade-button {
+  background: #218f92;
+  color: #ffffff;
+}
+
+.upgrade-button:hover {
+  background: #176f72;
+}
+
+.featured-plan {
+  border: 2px solid #258f91;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -13px;
+  right: 20px;
+  padding: 7px 12px;
+  background: #218f92;
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.pricing-note {
+  margin: 35px auto 0;
+  color: #68777c;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .pricing-page {
+    padding: 42px 18px;
+  }
+
+  .pricing-plans {
+    grid-template-columns: minmax(0, 400px);
+    gap: 30px;
+  }
+
+  .pricing-hero {
+    margin-bottom: 35px;
+  }
+
+  .pricing-card {
+    padding: 28px 24px;
+  }
+}
+.pricing-message {
+  max-width: 760px;
+  margin: 24px auto 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #e4f5f3;
+  color: #173e42;
+  line-height: 1.5;
+}
+
+.plan-button:disabled {
+  cursor: default;
+  opacity: 0.75;
+}
+
+.upgrade-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(10, 25, 28, 0.58);
+}
+
+.upgrade-modal {
+  position: relative;
+  width: min(100%, 460px);
+  padding: 32px;
+  background: #ffffff;
+  color: #17252b;
+  border-radius: 14px;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.2);
+}
+
+.upgrade-modal h2 {
+  margin: 0 30px 12px 0;
+}
+
+.upgrade-modal p {
+  color: #52656b;
+  line-height: 1.6;
+}
+
+.signed-in-email {
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: 0;
+  background: transparent;
+  color: #17252b;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-cancel {
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px;
+  border: 1px solid #dce6e6;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #17252b;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .upgrade-modal {
+    padding: 26px 20px;
+  }
+}
